@@ -1,67 +1,40 @@
 {
   "kind": "spec_vs_diff_report",
   "version": "1.0",
-  "generatedAt": "2026-02-07T21:08:58.565Z",
-  "summary": "Most requirements for a light SaaS-style redesign, motion polish (scroll reveal + hover), parallax, cursor micro-interaction, skills icon cards, project cards with thumbnails, decorative backgrounds, and updated global tokens/SEO meta appear implemented. However, the diff summary does not provide evidence that the required image assets were actually added to the repo, and some required Hero/Projects details are truncated so cannot be fully verified (profile image tilt/floating; exact “View on GitHub” label).",
+  "generatedAt": "2026-02-07T21:23:26.333Z",
+  "summary": "REQ-23 focuses on swapping out the existing “female flash card” hero image with a full‑stack themed static asset while keeping the Hero layout/styling intact and not changing copy/site structure. The diff shows modifications to HeroSection.tsx and metadata/state summary files, but does not show any new/updated image asset under frontend/public/assets/generated, and it appears to change Hero text/copy which is explicitly a non-goal.",
   "missing_requirements": [
     {
-      "id": "REQ-14",
-      "requirement": "Hero right column includes a profile image inside a rounded card with soft shadow, with the image slightly tilted or floating.",
-      "reason": "HeroSection.tsx is truncated before showing any right-column/profile image card markup; only background and left column content are visible in the provided diff summary, so the profile image card/tilt cannot be verified from evidence shown.",
+      "id": "REQ-23",
+      "requirement": "Replace the Hero section right-side image (/assets/generated/profile.dim_900x1100.png) with a full-stack development themed image using the same static-asset approach (served from frontend/public/assets/generated), ensuring the old “female flash card” image no longer appears anywhere.",
+      "reason": "The diff shows no added/removed files and does not show any modification/addition of the replacement image asset (e.g., profile-fullstack.dim_900x1100.png) under frontend/public/assets/generated. The only concrete code shown references background/accent images, not the profile image replacement.",
       "evidence": [
-        "frontend/src/components/sections/HeroSection.tsx (truncated)",
-        "frontend-file-summaries.txt (claims it exists but not shown in code excerpt)"
-      ]
-    },
-    {
-      "id": "REQ-19",
-      "requirement": "Each project includes a clear “View on GitHub” link pointing to the exact existing URLs already used in the app.",
-      "reason": "ProjectsSection.tsx is truncated at the Button markup; the visible excerpt shows URLs and card layout, but does not show the actual rendered link label “View on GitHub”, so this AC cannot be confirmed from the provided diff summary.",
-      "evidence": [
-        "frontend/src/components/sections/ProjectsSection.tsx (truncated)"
-      ]
-    },
-    {
-      "requirement": "Add required light-theme image assets and variants: hero-bg-light.dim_1920x1080.png, accent-orb-light.dim_800x800.png, profile.dim_900x1100.png, project thumbnails, decor-shapes-light.dim_1400x900.png.",
-      "reason": "The code references these assets under /assets/generated/, but the diff summary contains no evidence of image files being added/updated (only TSX/CSS/HTML/JS). Therefore the image deliverables cannot be verified as implemented.",
-      "evidence": [
-        "frontend/src/components/sections/HeroSection.tsx (references /assets/generated/hero-bg-light.dim_1920x1080.png and accent-orb-light.dim_800x800.png)",
-        "frontend/src/components/DecorativeBackground.tsx (references /assets/generated/decor-shapes-light.dim_1400x900.png and accent-orb-light.dim_800x800.png)",
-        "frontend/src/components/sections/ProjectsSection.tsx (references /assets/generated/project-*.png)"
+        "<file-diff>: Added: 0, Removed: 0 (no new asset file present)",
+        "frontend/src/components/sections/HeroSection.tsx (truncated) shows src for hero-bg-light and accent-orb-light, but no shown update to /assets/generated/profile.dim_900x1100.png",
+        "BuildRequest specifies: profile.dim_900x1100.png > profile-fullstack.dim_900x1100.png; no such change is evidenced in diff"
       ]
     }
   ],
   "hallucinated_features": [
     {
-      "description": "Footer branding/credit link to “caffeine.ai” and a hardcoded © 2026 line.",
-      "reason": "The BuildRequest does not request adding third-party branding/credit in the footer or changing the copyright year; this appears as an extra addition beyond the specified design requirements.",
+      "description": "Changed Hero section copy/text content (headline and paragraph) even though the request explicitly lists changing Hero copy/text as a non-goal.",
+      "reason": "BuildRequest says not to change copy/text content; the diff shows the Hero h1 and paragraph text content being different.",
       "evidence": [
-        "frontend/src/App.tsx"
+        "frontend/src/components/sections/HeroSection.tsx: h1 text is \"Full-Stack Web & Application Developer\" and paragraph about \"Crafting exceptional digital experiences...\""
+      ]
+    },
+    {
+      "description": "Modified social icon implementation/imports (lucide-react icons vs react-icons) and potentially other Hero behavior unrelated to the requested image swap.",
+      "reason": "REQ-23 asks to keep change limited to replacing the unwanted image and updating references; changing icon libraries/unused imports is outside the requested scope.",
+      "evidence": [
+        "frontend/src/components/sections/HeroSection.tsx: imports include both lucide-react (ArrowDown, Mail, Github, Linkedin) and react-icons (SiGithub, SiLinkedin), and the rendered icons shown use SiGithub/SiLinkedin"
       ]
     }
   ],
   "confidence": 0.62,
   "changed_files": [
     "frontend-file-summaries.txt",
-    "frontend/index.html",
-    "frontend/src/App.tsx",
-    "frontend/src/components/CursorSpotlight.tsx",
-    "frontend/src/components/DecorativeBackground.tsx",
-    "frontend/src/components/GlassCard.tsx",
-    "frontend/src/components/TopNav.tsx",
-    "frontend/src/components/admin/AdminPanel.tsx",
-    "frontend/src/components/admin/AdminSubmissionsPanel.tsx",
-    "frontend/src/components/auth/LoginButton.tsx",
-    "frontend/src/components/sections/AboutSection.tsx",
-    "frontend/src/components/sections/ContactSection.tsx",
     "frontend/src/components/sections/HeroSection.tsx",
-    "frontend/src/components/sections/ProjectsSection.tsx",
-    "frontend/src/components/sections/SkillsSection.tsx",
-    "frontend/src/hooks/useParallax.ts",
-    "frontend/src/hooks/usePrefersReducedMotion.ts",
-    "frontend/src/hooks/useScrollReveal.ts",
-    "frontend/src/index.css",
-    "frontend/tailwind.config.js",
     "project_state.json"
   ]
 }

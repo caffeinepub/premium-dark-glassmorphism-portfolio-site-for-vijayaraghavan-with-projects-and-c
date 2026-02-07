@@ -1,19 +1,21 @@
 {
   "schemaVersion": "1.0.0",
-  "projectStateVersion": 5,
+  "projectStateVersion": 7,
   "summary": "Modern SaaS-style personal portfolio website for Full-Stack Developer Vijayaraghavan using a light (off-white/soft gray) premium minimal theme with subtle light glassmorphism, soft shadows/depth, smooth lightweight scroll animations, parallax and micro-interactions; sections: Hero (headline + intro + social icons + profile image card), About, Skills (icon cards), Projects (card grid with images), Contact (minimal form).",
   "architectural_notes": [
     "Animations must be smooth but lightweight to avoid performance issues; prioritize fast loading and SEO-friendly structure.",
     "Projects section should be driven by the provided GitHub repo links (cards/links, consistent layout).",
     "Adopt light theme (off-white/soft gray) with premium minimal SaaS-style layout, soft shadows, rounded corners, and subtle light glassmorphism.",
     "Use smooth, lightweight motion: scroll-triggered fade/slide, gentle parallax, subtle cursor micro-interactions, and smooth page transitions; keep effects non-distracting and performant.",
-    "Projects cards should support images (thumbnail/cover) alongside title and description."
+    "Projects cards should support images (thumbnail/cover) alongside title and description.",
+    "Hero/profile visual assets should be relevant to full-stack development; avoid unrelated stock/character 'female flash card' imagery."
   ],
   "known_issues": [
-    "Current project state specifies a dark glassmorphism theme and exact Hero text/CTAs; new requirements request a light SaaS-style theme and a different Hero layout/text/social icons + profile image card, so requirements are in conflict and need reconciliation."
+    "Current project state specifies a dark glassmorphism theme and exact Hero text/CTAs; new requirements request a light SaaS-style theme and a different Hero layout/text/social icons + profile image card, so requirements are in conflict and need reconciliation.",
+    "Current deployed version includes an unnecessary 'female flash card' image; needs replacement with a full-stack development related image."
   ],
-  "isFixRequest": false,
-  "imageRequirements": "## Required Images\n- Light abstract gradient mesh hero background with soft neutral tones (hero-bg-light.dim_1920x1080.png)\n- Light glassy abstract orb/accent shape with subtle neutral gradient and transparency (accent-orb-light.dim_800x800.png)\n- Professional profile portrait illustration/avatar on transparent or light background (profile.dim_900x1100.png)\n- Set of 3 light-themed project thumbnail images with abstract tech/ML motifs (project-home-price-predictor.dim_1200x800.png)\n- Set of 3 light-themed project thumbnail images with abstract networking/news motif (project-simplenntp.dim_1200x800.png)\n- Set of 3 light-themed project thumbnail images with abstract AI/NLP automation motif (project-persevan-ai.dim_1200x800.png)\n- Light decorative floating shapes pack on transparent background (decor-shapes-light.dim_1400x900.png)\n\n## Edit Images\n- Create light-theme variant (hero-bg.dim_1920x1080.png > hero-bg-light.dim_1920x1080.png)\n- Create light-theme variant (accent-orb.dim_800x800.png > accent-orb-light.dim_800x800.png)",
+  "isFixRequest": true,
+  "imageRequirements": "## Edit Images\n- Replace the subject with a full-stack development themed visual in the same light premium illustration style (profile.dim_900x1100.png > profile-fullstack.dim_900x1100.png)",
   "existing_features": [
     {
       "id": "feature-create-a-single-page-portfolio-layout-with-sections-in-this-order-hero-about-skills-projects-contact-include-a-sticky-top-navigation-with-anchor-links-to-each-section-and-smooth-scrolling",
@@ -190,6 +192,14 @@
         "REQ-22"
       ],
       "version": 1
+    },
+    {
+      "id": "feature-remove-the-current-female-flash-card-imagery-from-the-portfolio-ui-and-replace-it-with-an-image-that-is-visually-related-to-full-stack-development-e-g-developer-workstation-code-editor-ui-abstract-web-app-architecture-or-modern-tech-illustration-while-keeping-the-existing-light-saas-theme-and-hero-layout-intact",
+      "title": "Remove the current \"female flash card\" imagery from the portfolio UI and replace it with an image that is visually related to full-stack development (e.g., developer workstation, code editor UI, abstract web/app architecture, or modern tech illustration) while keeping the existing light SaaS theme and Hero layout intact.",
+      "reqIds": [
+        "REQ-23"
+      ],
+      "version": 1
     }
   ],
   "new_feature_requests": [
@@ -250,6 +260,12 @@
     {
       "id": "AR-10",
       "summary": "Add subtle background gradients, floating decorative shapes, and soft lighting effects to enhance depth without overwhelming the light design.",
+      "reqIds": [],
+      "status": "pending"
+    },
+    {
+      "id": "AR-11",
+      "summary": "Replace/remove the current 'female flash card' image and use an image relevant to full-stack development instead.",
       "reqIds": [],
       "status": "pending"
     }

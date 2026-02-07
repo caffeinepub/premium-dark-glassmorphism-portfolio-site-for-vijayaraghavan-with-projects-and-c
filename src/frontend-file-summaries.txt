@@ -2,7 +2,7 @@
   "frontend/src/App.tsx": "Main application component composing all sections with cursor spotlight, decorative background, navigation, footer, and admin panel in a light SaaS-style layout.",
   "frontend/src/components/TopNav.tsx": "Sticky navigation header with smooth-scrolling anchor links for desktop and collapsible Sheet menu for mobile, styled for light theme with soft shadows and blur.",
   "frontend/src/components/GlassCard.tsx": "Reusable light glassmorphism card component with semi-transparent white background, subtle blur, soft shadows, and optional hover lift animation.",
-  "frontend/src/components/sections/HeroSection.tsx": "Hero section with split layout featuring headline, intro text, animated social icons on the left, and a floating tilted profile image card with parallax on the right.",
+  "frontend/src/components/sections/HeroSection.tsx": "Hero section with split layout featuring headline, intro text, animated social icons on the left, and a floating tilted full-stack development illustration card with parallax on the right.",
   "frontend/src/components/sections/AboutSection.tsx": "About section displaying professional summary in a light glassmorphism card with scroll-reveal animation.",
   "frontend/src/components/sections/SkillsSection.tsx": "Skills section with icon-based card grid displaying all required technologies with hover glow effects and staggered scroll-reveal animations, using correct SiAmazon icon for AWS.",
   "frontend/src/components/sections/ProjectsSection.tsx": "Projects section with image thumbnail cards featuring project images, titles, descriptions, tech tags, and GitHub links with smooth hover animations.",

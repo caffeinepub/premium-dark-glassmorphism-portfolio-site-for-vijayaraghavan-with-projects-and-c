@@ -109,7 +109,7 @@ export default function HeroSection() {
             </div>
           </div>
 
-          {/* Right Column - Profile Image */}
+          {/* Right Column - Full-Stack Development Illustration */}
           <div className="flex justify-center md:justify-end">
             <div
               className="relative group"
@@ -122,8 +122,8 @@ export default function HeroSection() {
                 {/* Floating card with tilt effect */}
                 <div className="relative rounded-3xl overflow-hidden bg-white/80 backdrop-blur-sm border border-gray-200/60 shadow-2xl transform rotate-2 group-hover:rotate-0 transition-all duration-500 hover:shadow-3xl">
                   <img
-                    src="/assets/generated/profile.dim_900x1100.png"
-                    alt="Vijayaraghavan - Full-Stack Developer"
+                    src="/assets/generated/profile-fullstack.dim_900x1100.png"
+                    alt="Full-Stack Development Illustration"
                     className="w-full h-auto object-cover"
                   />
                   {/* Subtle gradient overlay */}
