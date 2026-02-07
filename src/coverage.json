@@ -1,39 +1,21 @@
 {
   "kind": "coverage_report",
   "version": "1.0",
-  "generatedAt": "2026-02-07T21:23:26.336Z",
+  "generatedAt": "2026-02-07T21:32:03.544Z",
   "sources": {
     "buildRequest": true,
     "implementationPlan": true
   },
   "requirements": {
-    "total": 1,
-    "implemented": 1,
-    "items": [
-      {
-        "id": "REQ-23",
-        "summary": "Remove the current \"female flash card\" imagery from the portfolio UI and replace it with an image that is visually related to full-stack development (e.g., developer workstation, code editor UI, abstract web/app architecture, or modern tech illustration) while keeping the existing light SaaS theme and Hero layout intact.",
-        "status": "implemented",
-        "plannedFiles": [
-          "frontend/public/assets/generated/profile-fullstack.dim_900x1100.png",
-          "frontend/src/components/sections/HeroSection.tsx",
-          "frontend/public/assets/generated/profile.dim_900x1100.png"
-        ],
-        "matchedFiles": [
-          "frontend/public/assets/generated/profile-fullstack.dim_900x1100.png",
-          "frontend/src/components/sections/HeroSection.tsx",
-          "frontend/public/assets/generated/profile.dim_900x1100.png"
-        ]
-      }
-    ]
+    "total": 0,
+    "implemented": 0,
+    "items": []
   },
   "changedFiles": [
     "build-request.json",
     "feature_evidence.json",
     "frontend-file-summaries.txt",
     "frontend-implementation-plan.json",
-    "frontend/public/assets/generated/profile-fullstack.dim_900x1100.png",
-    "frontend/public/assets/generated/profile.dim_900x1100.png",
     "frontend/src/components/sections/HeroSection.tsx",
     "project_state.json",
     "scratch/component-selection.json",

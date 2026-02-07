@@ -1,10 +1,10 @@
 # Specification
 
 ## Summary
-**Goal:** Replace the current Hero “female flash card” image with a full-stack development themed image while keeping the existing light SaaS look and Hero layout/behavior unchanged.
+**Goal:** Remove the flashcard imagery from the portfolio Hero section while keeping the existing single-page layout and light SaaS-style theme intact.
 
 **Planned changes:**
-- Create an edited replacement for the current Hero right-side image using a full-stack development themed visual in the same illustration style.
-- Update the Hero section image reference to use the new generated static asset, ensuring the existing rounded card, tilt/hover, and parallax behavior remain intact.
+- Remove the flashcard image/visual element from the Hero split layout.
+- Ensure the Hero section still renders cleanly without altering existing typography, CTAs, social links, or section structure.
 
-**User-visible outcome:** The Hero section shows a full-stack development related image instead of the “female flash card,” with the same layout and responsive rendering across mobile/tablet/desktop.
+**User-visible outcome:** The Hero section no longer displays the flashcard image, while the rest of the page layout and styling remain unchanged.

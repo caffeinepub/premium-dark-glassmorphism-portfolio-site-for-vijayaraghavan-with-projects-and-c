@@ -1,42 +1,22 @@
 {
   "kind": "build_request",
-  "title": "Replace the current female flash-card image with a full-stack development related image",
+  "title": "Remove flashcard image from the portfolio hero",
   "priority": "normal",
-  "requirements": [
-    {
-      "id": "REQ-23",
-      "text": "Remove the current \"female flash card\" imagery from the portfolio UI and replace it with an image that is visually related to full-stack development (e.g., developer workstation, code editor UI, abstract web/app architecture, or modern tech illustration) while keeping the existing light SaaS theme and Hero layout intact.",
-      "target": "frontend",
-      "source": {
-        "messageIds": [
-          "recent-messages"
-        ],
-        "quotes": [
-          "the female flash card is not needded instaed change a pic related to full stck devlopemt"
-        ]
-      },
-      "acceptanceCriteria": [
-        "No \"female flash card\" image appears anywhere on the site after the change.",
-        "The Hero section's right-side image (currently /assets/generated/profile.dim_900x1100.png) is replaced with a full-stack development related image and still renders correctly across mobile/tablet/desktop.",
-        "The replacement image uses the same static-asset approach (served from frontend/public/assets/generated) and does not introduce new network calls at runtime.",
-        "The new image preserves existing styling/behavior in HeroSection (rounded card, subtle tilt/hover, parallax), with no layout shifts or broken aspect ratios."
-      ]
-    }
-  ],
+  "requirements": [],
   "constraints": [
-    "Do not modify files under frontend/src/components/ui or any paths listed as immutable in SYSTEM_CONTEXT.",
-    "Keep the change limited to replacing the unwanted image and updating any references; do not alter the site structure, navigation, or backend behavior."
+    "Do not introduce new sections or change the existing single-page layout (Hero, About, Skills, Projects, Contact).",
+    "Keep the existing light SaaS-style theme and current Hero split layout intact.",
+    "Do not edit any files under frontend/src/components/ui or any frontend immutablePaths (e.g., frontend/src/hooks/useInternetIdentity.ts, frontend/src/hooks/useActor.ts, frontend/src/main.tsx).",
+    "Backend must remain single-actor (all Motoko logic in backend/main.mo); no backend changes are required for this request."
   ],
   "nonGoals": [
-    "Changing copy/text content in the Hero section or other sections.",
-    "Adding new sections, new project cards, or changing existing GitHub URLs.",
-    "Any backend/schema changes related to contact submissions or admin tools."
+    "Redesigning the Hero section layout, typography, CTAs, or social links beyond removing the flashcard imagery.",
+    "Changing project card content, GitHub URLs, or contact/admin functionality.",
+    "Adding new authentication providers or third-party integrations."
   ],
   "imageRequirements": {
     "required": [],
-    "edits": [
-      "Replace the subject with a full-stack development themed visual in the same light premium illustration style (profile.dim_900x1100.png > profile-fullstack.dim_900x1100.png)"
-    ]
+    "edits": []
   },
   "userProfileUpdate": {
     "goalsToAdd": [],

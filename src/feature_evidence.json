@@ -1,24 +1,4 @@
 {
   "kind": "feature_evidence_report",
-  "features": [
-    {
-      "featureId": "feature-remove-the-current-female-flash-card-imagery-from-the-portfolio-ui-and-replace-it-with-an-image-that-is-visually-related-to-full-stack-development-e-g-developer-workstation-code-editor-ui-abstract-web-app-architecture-or-modern-tech-illustration-while-keeping-the-existing-light-saas-theme-and-hero-layout-intact",
-      "featureTitle": "Remove the current \"female flash card\" imagery from the portfolio UI and replace it with an image that is visually related to full-stack development (e.g., developer workstation, code editor UI, abstract web/app architecture, or modern tech illustration) while keeping the existing light SaaS theme and Hero layout intact.",
-      "files": [
-        "frontend/src/components/sections/HeroSection.tsx"
-      ],
-      "components": [
-        "authorization@4.0.0",
-        "core-infrastructure@1.0.2",
-        "shadcn-ui@1.0.0",
-        "build-template-react@1.0.0",
-        "initial-app@1.0.0",
-        "github-export-icp-cli@1.0.0"
-      ],
-      "testIds": [
-        "REQ-23"
-      ],
-      "confidence": "high"
-    }
-  ]
+  "features": []
 }

@@ -1,6 +1,6 @@
 {
   "schemaVersion": "1.0.0",
-  "projectStateVersion": 7,
+  "projectStateVersion": 9,
   "summary": "Modern SaaS-style personal portfolio website for Full-Stack Developer Vijayaraghavan using a light (off-white/soft gray) premium minimal theme with subtle light glassmorphism, soft shadows/depth, smooth lightweight scroll animations, parallax and micro-interactions; sections: Hero (headline + intro + social icons + profile image card), About, Skills (icon cards), Projects (card grid with images), Contact (minimal form).",
   "architectural_notes": [
     "Animations must be smooth but lightweight to avoid performance issues; prioritize fast loading and SEO-friendly structure.",
@@ -15,7 +15,6 @@
     "Current deployed version includes an unnecessary 'female flash card' image; needs replacement with a full-stack development related image."
   ],
   "isFixRequest": true,
-  "imageRequirements": "## Edit Images\n- Replace the subject with a full-stack development themed visual in the same light premium illustration style (profile.dim_900x1100.png > profile-fullstack.dim_900x1100.png)",
   "existing_features": [
     {
       "id": "feature-create-a-single-page-portfolio-layout-with-sections-in-this-order-hero-about-skills-projects-contact-include-a-sticky-top-navigation-with-anchor-links-to-each-section-and-smooth-scrolling",

@@ -1,37 +1,42 @@
 {
   "kind": "spec_vs_diff_report",
   "version": "1.0",
-  "generatedAt": "2026-02-07T21:23:26.333Z",
-  "summary": "REQ-23 focuses on swapping out the existing “female flash card” hero image with a full‑stack themed static asset while keeping the Hero layout/styling intact and not changing copy/site structure. The diff shows modifications to HeroSection.tsx and metadata/state summary files, but does not show any new/updated image asset under frontend/public/assets/generated, and it appears to change Hero text/copy which is explicitly a non-goal.",
+  "generatedAt": "2026-02-07T21:32:03.541Z",
+  "summary": "The diff updates the Hero section but appears to change the Hero layout/content beyond simply removing a flashcard image, potentially violating the constraint to keep the existing Hero split layout intact.",
   "missing_requirements": [
     {
-      "id": "REQ-23",
-      "requirement": "Replace the Hero section right-side image (/assets/generated/profile.dim_900x1100.png) with a full-stack development themed image using the same static-asset approach (served from frontend/public/assets/generated), ensuring the old “female flash card” image no longer appears anywhere.",
-      "reason": "The diff shows no added/removed files and does not show any modification/addition of the replacement image asset (e.g., profile-fullstack.dim_900x1100.png) under frontend/public/assets/generated. The only concrete code shown references background/accent images, not the profile image replacement.",
+      "requirement": "Keep the existing light SaaS-style theme and current Hero split layout intact.",
+      "reason": "HeroSection.tsx now shows a centered, text-only hero content block (\"Centered Text Content\" / \"text-center\") and does not show the prior split layout structure; this suggests the Hero layout was changed rather than only removing the flashcard image.",
       "evidence": [
-        "<file-diff>: Added: 0, Removed: 0 (no new asset file present)",
-        "frontend/src/components/sections/HeroSection.tsx (truncated) shows src for hero-bg-light and accent-orb-light, but no shown update to /assets/generated/profile.dim_900x1100.png",
-        "BuildRequest specifies: profile.dim_900x1100.png > profile-fullstack.dim_900x1100.png; no such change is evidenced in diff"
+        "frontend/src/components/sections/HeroSection.tsx"
       ]
     }
   ],
   "hallucinated_features": [
     {
-      "description": "Changed Hero section copy/text content (headline and paragraph) even though the request explicitly lists changing Hero copy/text as a non-goal.",
-      "reason": "BuildRequest says not to change copy/text content; the diff shows the Hero h1 and paragraph text content being different.",
+      "description": "Added/introduced parallax and scroll-reveal behavior in the Hero via useParallax/useScrollReveal hooks.",
+      "reason": "The BuildRequest only asked to remove the flashcard image and explicitly listed non-goals around redesigning the Hero beyond that; adding animation/behavior hooks is an unrequested enhancement.",
       "evidence": [
-        "frontend/src/components/sections/HeroSection.tsx: h1 text is \"Full-Stack Web & Application Developer\" and paragraph about \"Crafting exceptional digital experiences...\""
+        "frontend/src/components/sections/HeroSection.tsx"
       ]
     },
     {
-      "description": "Modified social icon implementation/imports (lucide-react icons vs react-icons) and potentially other Hero behavior unrelated to the requested image swap.",
-      "reason": "REQ-23 asks to keep change limited to replacing the unwanted image and updating references; changing icon libraries/unused imports is outside the requested scope.",
+      "description": "Changed Hero headline and descriptive copy.",
+      "reason": "The BuildRequest did not request copy changes; it only requested removing the flashcard image while keeping the existing Hero layout/theme intact.",
       "evidence": [
-        "frontend/src/components/sections/HeroSection.tsx: imports include both lucide-react (ArrowDown, Mail, Github, Linkedin) and react-icons (SiGithub, SiLinkedin), and the rendered icons shown use SiGithub/SiLinkedin"
+        "frontend/src/components/sections/HeroSection.tsx"
+      ]
+    },
+    {
+      "description": "Updated project documentation/state summary files unrelated to removing the flashcard image.",
+      "reason": "Modifying metadata/summary files is not requested by the BuildRequest and does not directly implement the requested change.",
+      "evidence": [
+        "frontend-file-summaries.txt",
+        "project_state.json"
       ]
     }
   ],
-  "confidence": 0.62,
+  "confidence": 0.68,
   "changed_files": [
     "frontend-file-summaries.txt",
     "frontend/src/components/sections/HeroSection.tsx",

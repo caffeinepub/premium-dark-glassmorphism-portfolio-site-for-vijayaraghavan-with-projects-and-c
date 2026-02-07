@@ -1,34 +1,6 @@
 {
   "kind": "implementation_plan",
   "version": "1.0",
-  "title": "Replace Hero flash-card image with full-stack development themed illustration",
-  "requirements": [
-    {
-      "id": "REQ-23",
-      "summary": "Replace the Hero right-side image with a full-stack development themed static asset while preserving the existing Hero layout and effects.",
-      "acceptanceCriteria": [
-        "No \"female flash card\" image appears anywhere on the site after the change.",
-        "The Hero section's right-side image (currently /assets/generated/profile.dim_900x1100.png) is replaced with a full-stack development related image and still renders correctly across mobile/tablet/desktop.",
-        "The replacement image uses the same static-asset approach (served from frontend/public/assets/generated) and does not introduce new network calls at runtime.",
-        "The new image preserves existing styling/behavior in HeroSection (rounded card, subtle tilt/hover, parallax), with no layout shifts or broken aspect ratios."
-      ],
-      "file_operations": [
-        {
-          "path": "frontend/public/assets/generated/profile-fullstack.dim_900x1100.png",
-          "operation": "create",
-          "description": "Add the new full-stack development themed Hero illustration as a static generated asset (replacement for the prior \"female flash card\" image) so the UI can reference it without any runtime network calls."
-        },
-        {
-          "path": "frontend/src/components/sections/HeroSection.tsx",
-          "operation": "modify",
-          "description": "Update the Hero right-side image source to use /assets/generated/profile-fullstack.dim_900x1100.png while keeping the existing rounded card, subtle tilt/hover, and parallax behavior unchanged."
-        },
-        {
-          "path": "frontend/public/assets/generated/profile.dim_900x1100.png",
-          "operation": "delete",
-          "description": "Remove the old generated \"female flash card\" image asset to ensure it cannot appear anywhere in the portfolio UI via accidental/legacy references."
-        }
-      ]
-    }
-  ]
+  "title": "Remove flashcard image from the portfolio hero",
+  "requirements": []
 }
