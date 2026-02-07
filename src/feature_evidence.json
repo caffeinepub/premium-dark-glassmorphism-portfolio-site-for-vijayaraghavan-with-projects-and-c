@@ -1,0 +1,243 @@
+{
+  "kind": "feature_evidence_report",
+  "features": [
+    {
+      "featureId": "feature-switch-the-site-visual-direction-from-the-current-dark-glassmorphism-theme-to-a-light-saas-style-theme-off-white-soft-gray-background-not-pure-white-minimal-but-premium-look-soft-shadows-depth-layered-sections-rounded-corners-and-subtle-light-glassmorphism-light-blur-low-opacity",
+      "featureTitle": "Switch the site visual direction from the current dark glassmorphism theme to a light SaaS-style theme: off-white/soft gray background (not pure white), minimal but premium look, soft shadows/depth, layered sections, rounded corners, and subtle light glassmorphism (light blur + low opacity).",
+      "files": [
+        "frontend/index.html",
+        "frontend/src/App.tsx",
+        "frontend/src/components/GlassCard.tsx",
+        "frontend/src/components/TopNav.tsx",
+        "frontend/src/components/admin/AdminPanel.tsx",
+        "frontend/src/components/admin/AdminSubmissionsPanel.tsx",
+        "frontend/src/components/auth/LoginButton.tsx",
+        "frontend/src/index.css"
+      ],
+      "components": [
+        "authorization@4.0.0",
+        "core-infrastructure@1.0.2",
+        "shadcn-ui@1.0.0",
+        "build-template-react@1.0.0",
+        "initial-app@1.0.0",
+        "github-export-icp-cli@1.0.0"
+      ],
+      "testIds": [
+        "REQ-12"
+      ],
+      "confidence": "high"
+    },
+    {
+      "featureId": "feature-update-global-styling-tokens-and-base-background-treatment-to-match-the-light-theme-including-subtle-background-gradients-and-soft-lighting-effects-that-enhance-depth-without-overwhelming-the-design",
+      "featureTitle": "Update global styling tokens and base background treatment to match the light theme, including subtle background gradients and soft lighting effects that enhance depth without overwhelming the design.",
+      "files": [
+        "frontend/src/index.css",
+        "frontend/tailwind.config.js"
+      ],
+      "components": [
+        "authorization@4.0.0",
+        "core-infrastructure@1.0.2",
+        "shadcn-ui@1.0.0",
+        "build-template-react@1.0.0",
+        "initial-app@1.0.0",
+        "github-export-icp-cli@1.0.0"
+      ],
+      "testIds": [
+        "REQ-13"
+      ],
+      "confidence": "high"
+    },
+    {
+      "featureId": "feature-revise-the-hero-section-to-a-split-layout-inspired-by-clean-saas-landing-pages-left-column-includes-the-bold-headline-text-exactly-full-stack-web-application-developer-a-2-3-line-professional-intro-and-social-icons-with-hover-animation-right-column-includes-a-profile-image-inside-a-rounded-card-with-soft-shadow-with-the-image-slightly-tilted-or-floating-for-visual-interest",
+      "featureTitle": "Revise the Hero section to a split layout inspired by clean SaaS landing pages: left column includes the bold headline text exactly “Full-Stack Web & Application Developer”, a 2–3 line professional intro, and social icons with hover animation; right column includes a profile image inside a rounded card with soft shadow, with the image slightly tilted or floating for visual interest.",
+      "files": [
+        "frontend/src/components/TopNav.tsx",
+        "frontend/src/components/sections/HeroSection.tsx"
+      ],
+      "components": [
+        "authorization@4.0.0",
+        "core-infrastructure@1.0.2",
+        "shadcn-ui@1.0.0",
+        "build-template-react@1.0.0",
+        "initial-app@1.0.0",
+        "github-export-icp-cli@1.0.0"
+      ],
+      "testIds": [
+        "REQ-14"
+      ],
+      "confidence": "high"
+    },
+    {
+      "featureId": "feature-implement-smooth-lightweight-motion-polish-across-the-page-fade-in-slide-up-animations-triggered-on-scroll-for-major-section-content-smooth-page-section-transitions-refined-hover-effects-on-buttons-and-cards-lift-soft-shadow-slight-scale-honor-prefers-reduced-motion-by-disabling-or-minimizing-these-animations-when-requested",
+      "featureTitle": "Implement smooth, lightweight motion polish across the page: fade-in + slide-up animations triggered on scroll for major section content; smooth page/section transitions; refined hover effects on buttons and cards (lift, soft shadow, slight scale). Honor prefers-reduced-motion by disabling or minimizing these animations when requested.",
+      "files": [
+        "frontend/src/components/sections/AboutSection.tsx",
+        "frontend/src/components/sections/ContactSection.tsx",
+        "frontend/src/components/sections/ProjectsSection.tsx",
+        "frontend/src/components/sections/SkillsSection.tsx",
+        "frontend/src/hooks/usePrefersReducedMotion.ts",
+        "frontend/src/hooks/useScrollReveal.ts",
+        "frontend/src/index.css"
+      ],
+      "components": [
+        "authorization@4.0.0",
+        "core-infrastructure@1.0.2",
+        "shadcn-ui@1.0.0",
+        "build-template-react@1.0.0",
+        "initial-app@1.0.0",
+        "github-export-icp-cli@1.0.0"
+      ],
+      "testIds": [
+        "REQ-15"
+      ],
+      "confidence": "high"
+    },
+    {
+      "featureId": "feature-add-gentle-parallax-movement-for-hero-imagery-decorative-visuals-e-g-profile-image-card-and-or-background-shapes-that-responds-to-scroll-and-remains-subtle-performant-and-disabled-reduced-under-prefers-reduced-motion",
+      "featureTitle": "Add gentle parallax movement for hero imagery/decorative visuals (e.g., profile image card and/or background shapes) that responds to scroll and remains subtle, performant, and disabled/reduced under prefers-reduced-motion.",
+      "files": [
+        "frontend/src/components/sections/HeroSection.tsx",
+        "frontend/src/hooks/useParallax.ts"
+      ],
+      "components": [
+        "authorization@4.0.0",
+        "core-infrastructure@1.0.2",
+        "shadcn-ui@1.0.0",
+        "build-template-react@1.0.0",
+        "initial-app@1.0.0",
+        "github-export-icp-cli@1.0.0"
+      ],
+      "testIds": [
+        "REQ-16"
+      ],
+      "confidence": "high"
+    },
+    {
+      "featureId": "feature-add-subtle-cursor-based-micro-interactions-that-enhance-depth-e-g-gentle-highlight-spotlight-or-soft-glow-following-the-cursor-over-key-surfaces-while-remaining-minimal-not-flashy-and-performant-and-disabled-reduced-under-prefers-reduced-motion",
+      "featureTitle": "Add subtle cursor-based micro-interactions that enhance depth (e.g., gentle highlight/spotlight or soft glow following the cursor over key surfaces) while remaining minimal (not flashy) and performant, and disabled/reduced under prefers-reduced-motion.",
+      "files": [
+        "frontend/src/App.tsx",
+        "frontend/src/components/CursorSpotlight.tsx",
+        "frontend/src/index.css"
+      ],
+      "components": [
+        "authorization@4.0.0",
+        "core-infrastructure@1.0.2",
+        "shadcn-ui@1.0.0",
+        "build-template-react@1.0.0",
+        "initial-app@1.0.0",
+        "github-export-icp-cli@1.0.0"
+      ],
+      "testIds": [
+        "REQ-17"
+      ],
+      "confidence": "high"
+    },
+    {
+      "featureId": "feature-revise-the-skills-section-to-display-the-specified-skills-as-clean-icon-cards-with-a-subtle-hover-glow-while-preserving-the-skill-list-html-css-javascript-react-next-js-node-js-flask-mysql-mongodb-redis-aws-python-ai-ml-workflows",
+      "featureTitle": "Revise the Skills section to display the specified skills as clean icon cards with a subtle hover glow while preserving the skill list: HTML, CSS, JavaScript, React, Next.js, Node.js, Flask, MySQL, MongoDB, Redis, AWS, Python AI/ML workflows.",
+      "files": [
+        "frontend/src/components/sections/SkillsSection.tsx",
+        "frontend/src/index.css"
+      ],
+      "components": [
+        "authorization@4.0.0",
+        "core-infrastructure@1.0.2",
+        "shadcn-ui@1.0.0",
+        "build-template-react@1.0.0",
+        "initial-app@1.0.0",
+        "github-export-icp-cli@1.0.0"
+      ],
+      "testIds": [
+        "REQ-18"
+      ],
+      "confidence": "high"
+    },
+    {
+      "featureId": "feature-revise-the-projects-section-to-a-card-based-layout-that-includes-an-image-thumbnail-title-and-short-description-for-each-project-with-smooth-hover-animations-preserve-the-existing-github-repository-urls-and-keep-a-clear-view-on-github-link-per-project",
+      "featureTitle": "Revise the Projects section to a card-based layout that includes an image thumbnail, title, and short description for each project, with smooth hover animations. Preserve the existing GitHub repository URLs and keep a clear “View on GitHub” link per project.",
+      "files": [
+        "frontend/src/components/sections/ProjectsSection.tsx"
+      ],
+      "components": [
+        "authorization@4.0.0",
+        "core-infrastructure@1.0.2",
+        "shadcn-ui@1.0.0",
+        "build-template-react@1.0.0",
+        "initial-app@1.0.0",
+        "github-export-icp-cli@1.0.0"
+      ],
+      "testIds": [
+        "REQ-19"
+      ],
+      "confidence": "high"
+    },
+    {
+      "featureId": "feature-update-the-contact-section-styling-to-match-the-minimal-light-theme-including-clean-form-styling-with-soft-focus-effects-preserve-existing-validation-and-success-error-states-and-keep-the-visible-social-profile-links-area",
+      "featureTitle": "Update the Contact section styling to match the minimal light theme, including clean form styling with soft focus effects; preserve existing validation and success/error states and keep the visible social/profile links area.",
+      "files": [
+        "frontend/src/components/sections/ContactSection.tsx",
+        "frontend/src/index.css"
+      ],
+      "components": [
+        "authorization@4.0.0",
+        "core-infrastructure@1.0.2",
+        "shadcn-ui@1.0.0",
+        "build-template-react@1.0.0",
+        "initial-app@1.0.0",
+        "github-export-icp-cli@1.0.0"
+      ],
+      "testIds": [
+        "REQ-20"
+      ],
+      "confidence": "high"
+    },
+    {
+      "featureId": "feature-add-floating-decorative-shapes-and-subtle-background-accents-light-theme-appropriate-that-contribute-to-depth-and-layered-sections-without-distracting-from-content",
+      "featureTitle": "Add floating decorative shapes and subtle background accents (light-theme appropriate) that contribute to depth and “layered sections” without distracting from content.",
+      "files": [
+        "frontend/src/App.tsx",
+        "frontend/src/components/DecorativeBackground.tsx",
+        "frontend/src/components/sections/HeroSection.tsx"
+      ],
+      "components": [
+        "authorization@4.0.0",
+        "core-infrastructure@1.0.2",
+        "shadcn-ui@1.0.0",
+        "build-template-react@1.0.0",
+        "initial-app@1.0.0",
+        "github-export-icp-cli@1.0.0"
+      ],
+      "testIds": [
+        "REQ-21"
+      ],
+      "confidence": "high"
+    },
+    {
+      "featureId": "feature-keep-the-site-fully-responsive-fast-loading-seo-friendly-professional-and-client-ready-after-these-design-and-layout-changes-including-maintaining-appropriate-metadata",
+      "featureTitle": "Keep the site fully responsive, fast-loading, SEO-friendly, professional, and client-ready after these design and layout changes (including maintaining appropriate metadata).",
+      "files": [
+        "frontend/index.html",
+        "frontend/src/components/CursorSpotlight.tsx",
+        "frontend/src/components/sections/ContactSection.tsx",
+        "frontend/src/components/sections/HeroSection.tsx",
+        "frontend/src/components/sections/ProjectsSection.tsx",
+        "frontend/src/components/sections/SkillsSection.tsx",
+        "frontend/src/hooks/useParallax.ts",
+        "frontend/src/hooks/useScrollReveal.ts"
+      ],
+      "components": [
+        "authorization@4.0.0",
+        "core-infrastructure@1.0.2",
+        "shadcn-ui@1.0.0",
+        "build-template-react@1.0.0",
+        "initial-app@1.0.0",
+        "github-export-icp-cli@1.0.0"
+      ],
+      "testIds": [
+        "REQ-22"
+      ],
+      "confidence": "high"
+    }
+  ]
+}

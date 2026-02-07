@@ -1,0 +1,250 @@
+{
+  "kind": "build_request",
+  "title": "Switch portfolio to a light SaaS-style theme with enhanced motion polish, new hero split layout, and project/skill cards with icons and images",
+  "priority": "normal",
+  "requirements": [
+    {
+      "id": "REQ-12",
+      "text": "Switch the site visual direction from the current dark glassmorphism theme to a light SaaS-style theme: off-white/soft gray background (not pure white), minimal but premium look, soft shadows/depth, layered sections, rounded corners, and subtle light glassmorphism (light blur + low opacity).",
+      "target": "frontend",
+      "source": {
+        "messageIds": [
+          "msg-6"
+        ],
+        "quotes": [
+          "Light theme background (off-white / soft gray, not pure white)\n\nMinimal but premium look\n\nSoft shadows, depth, and layered sections\n\nSubtle glassmorphism cards (light blur, low opacity)\n\nRounded corners and clean spacing"
+        ]
+      },
+      "acceptanceCriteria": [
+        "The default page renders in a light theme (no forced dark mode on initial load).",
+        "Background is off-white/soft gray and readable (not pure white), with subtle depth and soft section separation.",
+        "Glass-card surfaces appear as subtle light glassmorphism (low opacity + blur) with soft shadow and rounded corners.",
+        "Existing components (TopNav, sections, footer, admin panel) remain functional and visually consistent in the light theme."
+      ]
+    },
+    {
+      "id": "REQ-13",
+      "text": "Update global styling tokens and base background treatment to match the light theme, including subtle background gradients and soft lighting effects that enhance depth without overwhelming the design.",
+      "target": "frontend",
+      "source": {
+        "messageIds": [
+          "msg-6"
+        ],
+        "quotes": [
+          "Add subtle background gradients, floating decorative shapes, and soft lighting effects to enhance depth without overwhelming the design."
+        ]
+      },
+      "acceptanceCriteria": [
+        "Global CSS variables and base styles produce a coherent light palette (background, foreground, muted, border, ring).",
+        "The page background uses subtle gradients/lighting appropriate for a light SaaS layout (no dark bottom gradient).",
+        "All text maintains accessible contrast against the light background."
+      ]
+    },
+    {
+      "id": "REQ-14",
+      "text": "Revise the Hero section to a split layout inspired by clean SaaS landing pages: left column includes the bold headline text exactly “Full-Stack Web & Application Developer”, a 2–3 line professional intro, and social icons with hover animation; right column includes a profile image inside a rounded card with soft shadow, with the image slightly tilted or floating for visual interest.",
+      "target": "frontend",
+      "source": {
+        "messageIds": [
+          "msg-6"
+        ],
+        "quotes": [
+          "Hero Section\n\nLeft side:\n\nBold headline: Full-Stack Web & Application Developer\n\nShort professional intro (2–3 lines)\n\nSocial icons with hover animation\n\nRight side:\n\nProfile image inside a rounded card with soft shadow\n\nImage slightly tilted or floating for visual interest"
+        ]
+      },
+      "acceptanceCriteria": [
+        "Hero section layout is two-column on desktop and stacks cleanly on mobile.",
+        "Headline text in Hero matches exactly: “Full-Stack Web & Application Developer”.",
+        "Hero includes visible social icons (e.g., GitHub/LinkedIn) with hover animation and accessible labels.",
+        "Hero includes a profile image displayed in a rounded card with soft shadow; image/card has a subtle tilt or floating effect.",
+        "Hero retains smooth navigation behavior (scrolling to Projects and Contact remains available from the hero area)."
+      ]
+    },
+    {
+      "id": "REQ-15",
+      "text": "Implement smooth, lightweight motion polish across the page: fade-in + slide-up animations triggered on scroll for major section content; smooth page/section transitions; refined hover effects on buttons and cards (lift, soft shadow, slight scale). Honor prefers-reduced-motion by disabling or minimizing these animations when requested.",
+      "target": "frontend",
+      "source": {
+        "messageIds": [
+          "msg-6"
+        ],
+        "quotes": [
+          "Smooth fade-in and slide-up animations on scroll\n\nHover effects on buttons and cards (lift, soft shadow, slight scale)\n\nSmooth page transitions",
+          "The final website should feel clean, modern, trustworthy, and slightly animated, with more polish and effects than a basic portfolio, but still lightweight and elegant."
+        ]
+      },
+      "acceptanceCriteria": [
+        "As the user scrolls, each section’s primary content animates in with a subtle fade + upward motion (once per session/viewport entry is acceptable).",
+        "Buttons/cards exhibit gentle lift/shadow/scale on hover without jank.",
+        "When the OS setting prefers-reduced-motion is enabled, scroll/hover/transition animations are disabled or reduced to near-zero."
+      ]
+    },
+    {
+      "id": "REQ-16",
+      "text": "Add gentle parallax movement for hero imagery/decorative visuals (e.g., profile image card and/or background shapes) that responds to scroll and remains subtle, performant, and disabled/reduced under prefers-reduced-motion.",
+      "target": "frontend",
+      "source": {
+        "messageIds": [
+          "msg-6"
+        ],
+        "quotes": [
+          "Gentle parallax movement for images"
+        ]
+      },
+      "acceptanceCriteria": [
+        "At least one hero visual element exhibits subtle parallax movement during scroll.",
+        "Parallax effect does not cause layout shifts and remains smooth on mid-range devices.",
+        "Parallax is disabled or significantly reduced under prefers-reduced-motion."
+      ]
+    },
+    {
+      "id": "REQ-17",
+      "text": "Add subtle cursor-based micro-interactions that enhance depth (e.g., gentle highlight/spotlight or soft glow following the cursor over key surfaces) while remaining minimal (not flashy) and performant, and disabled/reduced under prefers-reduced-motion.",
+      "target": "frontend",
+      "source": {
+        "messageIds": [
+          "msg-6"
+        ],
+        "quotes": [
+          "Cursor-based micro-interactions (subtle, not flashy)"
+        ]
+      },
+      "acceptanceCriteria": [
+        "Cursor micro-interaction is visible but subtle on desktop pointer devices (no large/flashy cursor replacements).",
+        "Effect degrades gracefully on touch devices (no broken visuals).",
+        "Effect is disabled or reduced under prefers-reduced-motion."
+      ]
+    },
+    {
+      "id": "REQ-18",
+      "text": "Revise the Skills section to display the specified skills as clean icon cards with a subtle hover glow while preserving the skill list: HTML, CSS, JavaScript, React, Next.js, Node.js, Flask, MySQL, MongoDB, Redis, AWS, Python AI/ML workflows.",
+      "target": "frontend",
+      "source": {
+        "messageIds": [
+          "msg-6"
+        ],
+        "quotes": [
+          "Skills\n\nDisplay skills as clean icon cards with hover glow\n\nSkills: HTML, CSS, JavaScript, React, Next.js, Node.js, Flask, MySQL, MongoDB, Redis, AWS, Python AI/ML workflows"
+        ]
+      },
+      "acceptanceCriteria": [
+        "Skills are presented as individual cards (or a clearly card-based grid) with an icon and label per skill.",
+        "Cards have a subtle hover glow consistent with the light theme.",
+        "All listed skills appear and are readable; no listed skill is omitted."
+      ]
+    },
+    {
+      "id": "REQ-19",
+      "text": "Revise the Projects section to a card-based layout that includes an image thumbnail, title, and short description for each project, with smooth hover animations. Preserve the existing GitHub repository URLs and keep a clear “View on GitHub” link per project.",
+      "target": "frontend",
+      "source": {
+        "messageIds": [
+          "msg-6"
+        ],
+        "quotes": [
+          "Projects\n\nCard-based layout with image, title, and short description\n\nSmooth hover animations"
+        ]
+      },
+      "acceptanceCriteria": [
+        "Each project card displays a thumbnail image, project title, and short description.",
+        "Project cards have smooth, subtle hover animations (lift/shadow/scale) consistent with the light theme.",
+        "Each project includes a “View on GitHub” link pointing to the exact existing URLs already used in the app."
+      ]
+    },
+    {
+      "id": "REQ-20",
+      "text": "Update the Contact section styling to match the minimal light theme, including clean form styling with soft focus effects; preserve existing validation and success/error states and keep the visible social/profile links area.",
+      "target": "frontend",
+      "source": {
+        "messageIds": [
+          "msg-6"
+        ],
+        "quotes": [
+          "Contact\n\nMinimal contact section with clean form and soft focus effects"
+        ]
+      },
+      "acceptanceCriteria": [
+        "Contact form fields and buttons are styled for the light theme with soft focus states.",
+        "Existing client-side validation, submission behavior, and success/error messaging remain functional.",
+        "Social/profile links remain visible and accessible within the contact section."
+      ]
+    },
+    {
+      "id": "REQ-21",
+      "text": "Add floating decorative shapes and subtle background accents (light-theme appropriate) that contribute to depth and “layered sections” without distracting from content.",
+      "target": "frontend",
+      "source": {
+        "messageIds": [
+          "msg-6"
+        ],
+        "quotes": [
+          "Add subtle background gradients, floating decorative shapes, and soft lighting effects to enhance depth without overwhelming the design."
+        ]
+      },
+      "acceptanceCriteria": [
+        "At least 2 decorative background elements/shapes are visible (e.g., soft blobs, orbs, abstract shapes) with subtle motion or positioning.",
+        "Decorations never obstruct text readability and remain subtle on all breakpoints.",
+        "Decorations are non-interactive and do not interfere with scrolling/clicking (pointer-events disabled)."
+      ]
+    },
+    {
+      "id": "REQ-22",
+      "text": "Keep the site fully responsive, fast-loading, SEO-friendly, professional, and client-ready after these design and layout changes (including maintaining appropriate metadata).",
+      "target": "frontend",
+      "source": {
+        "messageIds": [
+          "msg-6"
+        ],
+        "quotes": [
+          "Fully responsive\n\nFast loading\n\nSEO-friendly\n\nProfessional and client-ready"
+        ]
+      },
+      "acceptanceCriteria": [
+        "All sections render cleanly on mobile, tablet, and desktop without overflow or broken layouts.",
+        "No new heavy dependencies are introduced for animations/parallax/cursor effects; performance remains smooth.",
+        "Existing title/meta description remain present (update only if needed to align with the new hero headline), and semantic section structure is preserved."
+      ]
+    }
+  ],
+  "constraints": [
+    "Do not edit files under frontend/src/components/ui (shadcn UI components); compose them instead.",
+    "Do not edit immutable paths: frontend/src/hooks/useInternetIdentity.ts, frontend/src/hooks/useInternetIdentity.tsx, frontend/src/hooks/useActor.ts, frontend/src/main.tsx, frontend/src/components/ui.",
+    "Backend must remain a single Motoko actor (backend/main.mo); do not introduce additional backend services.",
+    "Keep public site visitor experience unauthenticated; admin-only submissions listing must remain protected."
+  ],
+  "nonGoals": [
+    "Do not add project detail pages or routing changes beyond updating the single-page layout styling and section contents.",
+    "Do not add third-party authentication providers (Internet Identity only, already present).",
+    "Do not add real-time communication features (e.g., WebSockets/chat).",
+    "Do not change the contact submission data model or remove admin submissions functionality."
+  ],
+  "imageRequirements": {
+    "required": [
+      "Light abstract gradient mesh hero background with soft neutral tones (hero-bg-light.dim_1920x1080.png)",
+      "Light glassy abstract orb/accent shape with subtle neutral gradient and transparency (accent-orb-light.dim_800x800.png)",
+      "Professional profile portrait illustration/avatar on transparent or light background (profile.dim_900x1100.png)",
+      "Set of 3 light-themed project thumbnail images with abstract tech/ML motifs (project-home-price-predictor.dim_1200x800.png)",
+      "Set of 3 light-themed project thumbnail images with abstract networking/news motif (project-simplenntp.dim_1200x800.png)",
+      "Set of 3 light-themed project thumbnail images with abstract AI/NLP automation motif (project-persevan-ai.dim_1200x800.png)",
+      "Light decorative floating shapes pack on transparent background (decor-shapes-light.dim_1400x900.png)"
+    ],
+    "edits": [
+      "Create light-theme variant (hero-bg.dim_1920x1080.png > hero-bg-light.dim_1920x1080.png)",
+      "Create light-theme variant (accent-orb.dim_800x800.png > accent-orb-light.dim_800x800.png)"
+    ]
+  },
+  "userProfileUpdate": {
+    "goalsToAdd": [],
+    "goalsToRemove": [],
+    "preferencesToAdd": [
+      "Prefer a light, clean SaaS-style portfolio aesthetic (off-white/soft gray) with subtle light glassmorphism, soft shadows, layered sections, and polished but lightweight animations (scroll reveal, gentle parallax, subtle cursor micro-interactions)."
+    ],
+    "preferencesToRemove": [
+      "Prefer a dark, glossy premium theme with blue/purple glow as the primary visual direction."
+    ],
+    "miscToAdd": [],
+    "miscToRemove": [],
+    "fieldsToSet": {},
+    "fieldsToDelete": []
+  }
+}

@@ -1,2 +1,3 @@
-# premium-dark-glassmorphism-portfolio-site-for-vijayaraghavan-with-projects-and-c
-Exported from Caffeine project: Light SaaS-style portfolio site for Vijayaraghavan with polished animations and project cards
+## 
+
+To run app build and run docker image: `docker build -t app . docker run -it --network host app`

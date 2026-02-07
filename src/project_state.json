@@ -1,0 +1,261 @@
+{
+  "schemaVersion": "1.0.0",
+  "projectStateVersion": 5,
+  "summary": "Modern SaaS-style personal portfolio website for Full-Stack Developer Vijayaraghavan using a light (off-white/soft gray) premium minimal theme with subtle light glassmorphism, soft shadows/depth, smooth lightweight scroll animations, parallax and micro-interactions; sections: Hero (headline + intro + social icons + profile image card), About, Skills (icon cards), Projects (card grid with images), Contact (minimal form).",
+  "architectural_notes": [
+    "Animations must be smooth but lightweight to avoid performance issues; prioritize fast loading and SEO-friendly structure.",
+    "Projects section should be driven by the provided GitHub repo links (cards/links, consistent layout).",
+    "Adopt light theme (off-white/soft gray) with premium minimal SaaS-style layout, soft shadows, rounded corners, and subtle light glassmorphism.",
+    "Use smooth, lightweight motion: scroll-triggered fade/slide, gentle parallax, subtle cursor micro-interactions, and smooth page transitions; keep effects non-distracting and performant.",
+    "Projects cards should support images (thumbnail/cover) alongside title and description."
+  ],
+  "known_issues": [
+    "Current project state specifies a dark glassmorphism theme and exact Hero text/CTAs; new requirements request a light SaaS-style theme and a different Hero layout/text/social icons + profile image card, so requirements are in conflict and need reconciliation."
+  ],
+  "isFixRequest": false,
+  "imageRequirements": "## Required Images\n- Light abstract gradient mesh hero background with soft neutral tones (hero-bg-light.dim_1920x1080.png)\n- Light glassy abstract orb/accent shape with subtle neutral gradient and transparency (accent-orb-light.dim_800x800.png)\n- Professional profile portrait illustration/avatar on transparent or light background (profile.dim_900x1100.png)\n- Set of 3 light-themed project thumbnail images with abstract tech/ML motifs (project-home-price-predictor.dim_1200x800.png)\n- Set of 3 light-themed project thumbnail images with abstract networking/news motif (project-simplenntp.dim_1200x800.png)\n- Set of 3 light-themed project thumbnail images with abstract AI/NLP automation motif (project-persevan-ai.dim_1200x800.png)\n- Light decorative floating shapes pack on transparent background (decor-shapes-light.dim_1400x900.png)\n\n## Edit Images\n- Create light-theme variant (hero-bg.dim_1920x1080.png > hero-bg-light.dim_1920x1080.png)\n- Create light-theme variant (accent-orb.dim_800x800.png > accent-orb-light.dim_800x800.png)",
+  "existing_features": [
+    {
+      "id": "feature-create-a-single-page-portfolio-layout-with-sections-in-this-order-hero-about-skills-projects-contact-include-a-sticky-top-navigation-with-anchor-links-to-each-section-and-smooth-scrolling",
+      "title": "Create a single-page portfolio layout with sections in this order: Hero, About, Skills, Projects, Contact; include a sticky top navigation with anchor links to each section and smooth scrolling.",
+      "reqIds": [
+        "REQ-1"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-implement-the-hero-section-with-the-exact-text-content-name-vijayaraghavan-title-full-stack-developer-tagline-building-fast-scalable-and-intelligent-web-applications-plus-two-cta-buttons-labeled-view-projects-scrolls-to-projects-and-contact-scrolls-to-contact",
+      "title": "Implement the Hero section with the exact text content: Name 'Vijayaraghavan', Title 'Full-Stack Developer', Tagline 'Building fast, scalable, and intelligent web applications', plus two CTA buttons labeled 'View Projects' (scrolls to Projects) and 'Contact' (scrolls to Contact).",
+      "reqIds": [
+        "REQ-2"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-apply-a-modern-glossy-premium-dark-theme-with-glassmorphism-style-cards-subtle-blue-purple-gradients-and-soft-glow-accents-include-smooth-lightweight-hover-animations-and-section-transitions-without-heavy-effects",
+      "title": "Apply a modern, glossy, premium dark theme with glassmorphism-style cards, subtle blue/purple gradients, and soft glow accents; include smooth, lightweight hover animations and section transitions without heavy effects.",
+      "reqIds": [
+        "REQ-3"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-implement-the-about-section-with-a-short-professional-summary-emphasizing-clean-code-performance-and-scalability-english-professional-tone",
+      "title": "Implement the About section with a short professional summary emphasizing clean code, performance, and scalability (English, professional tone).",
+      "reqIds": [
+        "REQ-4"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-implement-the-skills-section-with-grouped-skill-lists-exactly-under-these-headings-and-items-frontend-html-css-javascript-react-next-js-backend-node-js-flask-databases-mysql-mongodb-redis-hbase-cloud-aws-ai-ml-python-based-ai-ml-workflows",
+      "title": "Implement the Skills section with grouped skill lists exactly under these headings and items: Frontend (HTML, CSS, JavaScript, React, Next.js), Backend (Node.js, Flask), Databases (MySQL, MongoDB, Redis, HBase), Cloud (AWS), AI/ML (Python-based AI & ML workflows).",
+      "reqIds": [
+        "REQ-5"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-implement-the-projects-section-with-a-clean-business-client-ready-grid-of-project-cards-glassmorphism-using-the-provided-github-repository-urls-each-card-must-include-a-project-name-derived-from-the-repo-name-a-short-1-2-sentence-professional-description-a-tech-stack-tag-list-and-a-view-on-github-link-to-the-exact-url",
+      "title": "Implement the Projects section with a clean, business-client-ready grid of project cards (glassmorphism) using the provided GitHub repository URLs; each card must include a project name derived from the repo name, a short 1–2 sentence professional description, a tech stack/tag list, and a 'View on GitHub' link to the exact URL.",
+      "reqIds": [
+        "REQ-6"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-implement-the-contact-section-with-a-simple-contact-form-name-email-message-and-a-visible-area-for-social-profile-links-include-basic-client-side-validation-and-a-clear-success-error-state-after-submission",
+      "title": "Implement the Contact section with a simple contact form (Name, Email, Message) and a visible area for social/profile links; include basic client-side validation and a clear success/error state after submission.",
+      "reqIds": [
+        "REQ-7"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-persist-contact-form-submissions-in-the-motoko-backend-canister-store-name-email-message-and-timestamp-and-expose-an-authenticated-admin-only-method-to-list-submissions-keep-the-public-site-unauthenticated-for-visitors",
+      "title": "Persist contact form submissions in the Motoko backend canister (store name, email, message, and timestamp) and expose an authenticated admin-only method to list submissions; keep the public site unauthenticated for visitors.",
+      "reqIds": [
+        "REQ-8"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-ensure-the-site-is-seo-friendly-and-fast-loading-set-appropriate-page-title-and-meta-description-use-semantic-section-markup-optimize-images-assets-and-avoid-unnecessary-large-dependencies",
+      "title": "Ensure the site is SEO-friendly and fast-loading: set appropriate page title and meta description, use semantic section markup, optimize images/assets, and avoid unnecessary large dependencies.",
+      "reqIds": [
+        "REQ-9"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-add-accessibility-and-polish-consistent-focus-states-sufficient-contrast-in-the-dark-theme-reduced-motion-support-honor-prefers-reduced-motion-and-responsive-typography-spacing-across-breakpoints",
+      "title": "Add accessibility and polish: consistent focus states, sufficient contrast in the dark theme, reduced-motion support (honor prefers-reduced-motion), and responsive typography/spacing across breakpoints.",
+      "reqIds": [
+        "REQ-10"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-add-generated-static-visual-assets-to-support-the-premium-look-hero-background-subtle-abstract-accent-and-render-them-from-frontend-public-assets-generated",
+      "title": "Add generated static visual assets to support the premium look (hero background + subtle abstract accent) and render them from frontend/public/assets/generated.",
+      "reqIds": [
+        "REQ-11"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-switch-the-site-visual-direction-from-the-current-dark-glassmorphism-theme-to-a-light-saas-style-theme-off-white-soft-gray-background-not-pure-white-minimal-but-premium-look-soft-shadows-depth-layered-sections-rounded-corners-and-subtle-light-glassmorphism-light-blur-low-opacity",
+      "title": "Switch the site visual direction from the current dark glassmorphism theme to a light SaaS-style theme: off-white/soft gray background (not pure white), minimal but premium look, soft shadows/depth, layered sections, rounded corners, and subtle light glassmorphism (light blur + low opacity).",
+      "reqIds": [
+        "REQ-12"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-update-global-styling-tokens-and-base-background-treatment-to-match-the-light-theme-including-subtle-background-gradients-and-soft-lighting-effects-that-enhance-depth-without-overwhelming-the-design",
+      "title": "Update global styling tokens and base background treatment to match the light theme, including subtle background gradients and soft lighting effects that enhance depth without overwhelming the design.",
+      "reqIds": [
+        "REQ-13"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-revise-the-hero-section-to-a-split-layout-inspired-by-clean-saas-landing-pages-left-column-includes-the-bold-headline-text-exactly-full-stack-web-application-developer-a-2-3-line-professional-intro-and-social-icons-with-hover-animation-right-column-includes-a-profile-image-inside-a-rounded-card-with-soft-shadow-with-the-image-slightly-tilted-or-floating-for-visual-interest",
+      "title": "Revise the Hero section to a split layout inspired by clean SaaS landing pages: left column includes the bold headline text exactly “Full-Stack Web & Application Developer”, a 2–3 line professional intro, and social icons with hover animation; right column includes a profile image inside a rounded card with soft shadow, with the image slightly tilted or floating for visual interest.",
+      "reqIds": [
+        "REQ-14"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-implement-smooth-lightweight-motion-polish-across-the-page-fade-in-slide-up-animations-triggered-on-scroll-for-major-section-content-smooth-page-section-transitions-refined-hover-effects-on-buttons-and-cards-lift-soft-shadow-slight-scale-honor-prefers-reduced-motion-by-disabling-or-minimizing-these-animations-when-requested",
+      "title": "Implement smooth, lightweight motion polish across the page: fade-in + slide-up animations triggered on scroll for major section content; smooth page/section transitions; refined hover effects on buttons and cards (lift, soft shadow, slight scale). Honor prefers-reduced-motion by disabling or minimizing these animations when requested.",
+      "reqIds": [
+        "REQ-15"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-add-gentle-parallax-movement-for-hero-imagery-decorative-visuals-e-g-profile-image-card-and-or-background-shapes-that-responds-to-scroll-and-remains-subtle-performant-and-disabled-reduced-under-prefers-reduced-motion",
+      "title": "Add gentle parallax movement for hero imagery/decorative visuals (e.g., profile image card and/or background shapes) that responds to scroll and remains subtle, performant, and disabled/reduced under prefers-reduced-motion.",
+      "reqIds": [
+        "REQ-16"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-add-subtle-cursor-based-micro-interactions-that-enhance-depth-e-g-gentle-highlight-spotlight-or-soft-glow-following-the-cursor-over-key-surfaces-while-remaining-minimal-not-flashy-and-performant-and-disabled-reduced-under-prefers-reduced-motion",
+      "title": "Add subtle cursor-based micro-interactions that enhance depth (e.g., gentle highlight/spotlight or soft glow following the cursor over key surfaces) while remaining minimal (not flashy) and performant, and disabled/reduced under prefers-reduced-motion.",
+      "reqIds": [
+        "REQ-17"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-revise-the-skills-section-to-display-the-specified-skills-as-clean-icon-cards-with-a-subtle-hover-glow-while-preserving-the-skill-list-html-css-javascript-react-next-js-node-js-flask-mysql-mongodb-redis-aws-python-ai-ml-workflows",
+      "title": "Revise the Skills section to display the specified skills as clean icon cards with a subtle hover glow while preserving the skill list: HTML, CSS, JavaScript, React, Next.js, Node.js, Flask, MySQL, MongoDB, Redis, AWS, Python AI/ML workflows.",
+      "reqIds": [
+        "REQ-18"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-revise-the-projects-section-to-a-card-based-layout-that-includes-an-image-thumbnail-title-and-short-description-for-each-project-with-smooth-hover-animations-preserve-the-existing-github-repository-urls-and-keep-a-clear-view-on-github-link-per-project",
+      "title": "Revise the Projects section to a card-based layout that includes an image thumbnail, title, and short description for each project, with smooth hover animations. Preserve the existing GitHub repository URLs and keep a clear “View on GitHub” link per project.",
+      "reqIds": [
+        "REQ-19"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-update-the-contact-section-styling-to-match-the-minimal-light-theme-including-clean-form-styling-with-soft-focus-effects-preserve-existing-validation-and-success-error-states-and-keep-the-visible-social-profile-links-area",
+      "title": "Update the Contact section styling to match the minimal light theme, including clean form styling with soft focus effects; preserve existing validation and success/error states and keep the visible social/profile links area.",
+      "reqIds": [
+        "REQ-20"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-add-floating-decorative-shapes-and-subtle-background-accents-light-theme-appropriate-that-contribute-to-depth-and-layered-sections-without-distracting-from-content",
+      "title": "Add floating decorative shapes and subtle background accents (light-theme appropriate) that contribute to depth and “layered sections” without distracting from content.",
+      "reqIds": [
+        "REQ-21"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-keep-the-site-fully-responsive-fast-loading-seo-friendly-professional-and-client-ready-after-these-design-and-layout-changes-including-maintaining-appropriate-metadata",
+      "title": "Keep the site fully responsive, fast-loading, SEO-friendly, professional, and client-ready after these design and layout changes (including maintaining appropriate metadata).",
+      "reqIds": [
+        "REQ-22"
+      ],
+      "version": 1
+    }
+  ],
+  "new_feature_requests": [
+    {
+      "id": "AR-1",
+      "summary": "Create a professional portfolio website for Vijayaraghavan with dark theme, glossy premium look, glassmorphism cards, subtle blue/purple gradients and glow accents, clean typography, and smooth lightweight animations/transitions.",
+      "reqIds": [],
+      "status": "pending"
+    },
+    {
+      "id": "AR-2",
+      "summary": "Implement website sections: Hero (name, title, tagline, CTAs: View Projects/Contact), About (professional summary), Skills (grouped lists), Projects (hoverable project cards), Contact (form + social/profile links).",
+      "reqIds": [],
+      "status": "pending"
+    },
+    {
+      "id": "AR-3",
+      "summary": "Populate Projects section using provided GitHub repositories (home-price-predictor, SimpleNntp, Persevan_Ai) and create a clean business-client-ready layout for project cards.",
+      "reqIds": [],
+      "status": "pending"
+    },
+    {
+      "id": "AR-4",
+      "summary": "Ensure UX requirements: fully responsive (mobile/tablet/desktop), fast loading, SEO-friendly, and client-ready professional presentation.",
+      "reqIds": [],
+      "status": "pending"
+    },
+    {
+      "id": "AR-5",
+      "summary": "Switch visual direction to a light theme (off-white/soft gray) with minimal premium SaaS-style layout, soft shadows/depth, rounded corners, layered sections, and subtle light glassmorphism (low opacity + light blur).",
+      "reqIds": [],
+      "status": "pending"
+    },
+    {
+      "id": "AR-6",
+      "summary": "Add enhanced motion polish: fade-in/slide-up on scroll, gentle image parallax, smooth page transitions, subtle cursor-based micro-interactions, and refined hover effects (lift/soft shadow/slight scale).",
+      "reqIds": [],
+      "status": "pending"
+    },
+    {
+      "id": "AR-7",
+      "summary": "Update Hero layout to split design: left (headline 'Full-Stack Web & Application Developer', 2–3 line intro, social icons), right (profile image in rounded card with soft shadow; slightly tilted/floating).",
+      "reqIds": [],
+      "status": "pending"
+    },
+    {
+      "id": "AR-8",
+      "summary": "Revise Skills section presentation to use clean skill icon cards with hover glow while keeping the specified skill list (HTML, CSS, JavaScript, React, Next.js, Node.js, Flask, MySQL, MongoDB, Redis, AWS, Python AI/ML workflows).",
+      "reqIds": [],
+      "status": "pending"
+    },
+    {
+      "id": "AR-9",
+      "summary": "Revise Projects section to use card-based layout with an image, title, and short description per project, with smooth hover animations.",
+      "reqIds": [],
+      "status": "pending"
+    },
+    {
+      "id": "AR-10",
+      "summary": "Add subtle background gradients, floating decorative shapes, and soft lighting effects to enhance depth without overwhelming the light design.",
+      "reqIds": [],
+      "status": "pending"
+    }
+  ],
+  "gameProjectType": "none",
+  "projectName": "Light SaaS-style portfolio site for Vijayaraghavan with polished animations and project cards",
+  "clarification_mode": "instant",
+  "clarification_rounds": 0
+}

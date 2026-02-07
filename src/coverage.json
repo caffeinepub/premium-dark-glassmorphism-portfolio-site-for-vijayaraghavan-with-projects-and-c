@@ -1,0 +1,245 @@
+{
+  "kind": "coverage_report",
+  "version": "1.0",
+  "generatedAt": "2026-02-07T21:08:58.570Z",
+  "sources": {
+    "buildRequest": true,
+    "implementationPlan": true
+  },
+  "requirements": {
+    "total": 11,
+    "implemented": 11,
+    "items": [
+      {
+        "id": "REQ-12",
+        "summary": "Switch the site visual direction from the current dark glassmorphism theme to a light SaaS-style theme: off-white/soft gray background (not pure white), minimal but premium look, soft shadows/depth, layered sections, rounded corners, and subtle light glassmorphism (light blur + low opacity).",
+        "status": "implemented",
+        "plannedFiles": [
+          "frontend/index.html",
+          "frontend/src/index.css",
+          "frontend/src/components/GlassCard.tsx",
+          "frontend/src/components/TopNav.tsx",
+          "frontend/src/components/admin/AdminPanel.tsx",
+          "frontend/src/components/admin/AdminSubmissionsPanel.tsx",
+          "frontend/src/components/auth/LoginButton.tsx",
+          "frontend/src/App.tsx"
+        ],
+        "matchedFiles": [
+          "frontend/index.html",
+          "frontend/src/index.css",
+          "frontend/src/components/GlassCard.tsx",
+          "frontend/src/components/TopNav.tsx",
+          "frontend/src/components/admin/AdminPanel.tsx",
+          "frontend/src/components/admin/AdminSubmissionsPanel.tsx",
+          "frontend/src/components/auth/LoginButton.tsx",
+          "frontend/src/App.tsx"
+        ]
+      },
+      {
+        "id": "REQ-13",
+        "summary": "Update global styling tokens and base background treatment to match the light theme, including subtle background gradients and soft lighting effects that enhance depth without overwhelming the design.",
+        "status": "implemented",
+        "plannedFiles": [
+          "frontend/src/index.css",
+          "frontend/tailwind.config.js"
+        ],
+        "matchedFiles": [
+          "frontend/src/index.css",
+          "frontend/tailwind.config.js"
+        ]
+      },
+      {
+        "id": "REQ-14",
+        "summary": "Revise the Hero section to a split layout inspired by clean SaaS landing pages: left column includes the bold headline text exactly “Full-Stack Web & Application Developer”, a 2–3 line professional intro, and social icons with hover animation; right column includes a profile image inside a rounded card with soft shadow, with the image slightly tilted or floating for visual interest.",
+        "status": "implemented",
+        "plannedFiles": [
+          "frontend/public/assets/generated/hero-bg-light.dim_1920x1080.png",
+          "frontend/public/assets/generated/accent-orb-light.dim_800x800.png",
+          "frontend/public/assets/generated/profile.dim_900x1100.png",
+          "frontend/src/components/sections/HeroSection.tsx",
+          "frontend/src/components/TopNav.tsx"
+        ],
+        "matchedFiles": [
+          "frontend/public/assets/generated/hero-bg-light.dim_1920x1080.png",
+          "frontend/public/assets/generated/accent-orb-light.dim_800x800.png",
+          "frontend/public/assets/generated/profile.dim_900x1100.png",
+          "frontend/src/components/sections/HeroSection.tsx",
+          "frontend/src/components/TopNav.tsx"
+        ]
+      },
+      {
+        "id": "REQ-15",
+        "summary": "Implement smooth, lightweight motion polish across the page: fade-in + slide-up animations triggered on scroll for major section content; smooth page/section transitions; refined hover effects on buttons and cards (lift, soft shadow, slight scale). Honor prefers-reduced-motion by disabling or minimizing these animations when requested.",
+        "status": "implemented",
+        "plannedFiles": [
+          "frontend/src/hooks/usePrefersReducedMotion.ts",
+          "frontend/src/hooks/useScrollReveal.ts",
+          "frontend/src/index.css",
+          "frontend/src/components/sections/AboutSection.tsx",
+          "frontend/src/components/sections/SkillsSection.tsx",
+          "frontend/src/components/sections/ProjectsSection.tsx",
+          "frontend/src/components/sections/ContactSection.tsx"
+        ],
+        "matchedFiles": [
+          "frontend/src/hooks/usePrefersReducedMotion.ts",
+          "frontend/src/hooks/useScrollReveal.ts",
+          "frontend/src/index.css",
+          "frontend/src/components/sections/AboutSection.tsx",
+          "frontend/src/components/sections/SkillsSection.tsx",
+          "frontend/src/components/sections/ProjectsSection.tsx",
+          "frontend/src/components/sections/ContactSection.tsx"
+        ]
+      },
+      {
+        "id": "REQ-16",
+        "summary": "Add gentle parallax movement for hero imagery/decorative visuals (e.g., profile image card and/or background shapes) that responds to scroll and remains subtle, performant, and disabled/reduced under prefers-reduced-motion.",
+        "status": "implemented",
+        "plannedFiles": [
+          "frontend/src/hooks/useParallax.ts",
+          "frontend/src/components/sections/HeroSection.tsx"
+        ],
+        "matchedFiles": [
+          "frontend/src/hooks/useParallax.ts",
+          "frontend/src/components/sections/HeroSection.tsx"
+        ]
+      },
+      {
+        "id": "REQ-17",
+        "summary": "Add subtle cursor-based micro-interactions that enhance depth (e.g., gentle highlight/spotlight or soft glow following the cursor over key surfaces) while remaining minimal (not flashy) and performant, and disabled/reduced under prefers-reduced-motion.",
+        "status": "implemented",
+        "plannedFiles": [
+          "frontend/src/components/CursorSpotlight.tsx",
+          "frontend/src/index.css",
+          "frontend/src/App.tsx"
+        ],
+        "matchedFiles": [
+          "frontend/src/components/CursorSpotlight.tsx",
+          "frontend/src/index.css",
+          "frontend/src/App.tsx"
+        ]
+      },
+      {
+        "id": "REQ-18",
+        "summary": "Revise the Skills section to display the specified skills as clean icon cards with a subtle hover glow while preserving the skill list: HTML, CSS, JavaScript, React, Next.js, Node.js, Flask, MySQL, MongoDB, Redis, AWS, Python AI/ML workflows.",
+        "status": "implemented",
+        "plannedFiles": [
+          "frontend/src/components/sections/SkillsSection.tsx",
+          "frontend/src/index.css"
+        ],
+        "matchedFiles": [
+          "frontend/src/components/sections/SkillsSection.tsx",
+          "frontend/src/index.css"
+        ]
+      },
+      {
+        "id": "REQ-19",
+        "summary": "Revise the Projects section to a card-based layout that includes an image thumbnail, title, and short description for each project, with smooth hover animations. Preserve the existing GitHub repository URLs and keep a clear “View on GitHub” link per project.",
+        "status": "implemented",
+        "plannedFiles": [
+          "frontend/public/assets/generated/project-home-price-predictor.dim_1200x800.png",
+          "frontend/public/assets/generated/project-simplenntp.dim_1200x800.png",
+          "frontend/public/assets/generated/project-persevan-ai.dim_1200x800.png",
+          "frontend/src/components/sections/ProjectsSection.tsx"
+        ],
+        "matchedFiles": [
+          "frontend/public/assets/generated/project-home-price-predictor.dim_1200x800.png",
+          "frontend/public/assets/generated/project-simplenntp.dim_1200x800.png",
+          "frontend/public/assets/generated/project-persevan-ai.dim_1200x800.png",
+          "frontend/src/components/sections/ProjectsSection.tsx"
+        ]
+      },
+      {
+        "id": "REQ-20",
+        "summary": "Update the Contact section styling to match the minimal light theme, including clean form styling with soft focus effects; preserve existing validation and success/error states and keep the visible social/profile links area.",
+        "status": "implemented",
+        "plannedFiles": [
+          "frontend/src/components/sections/ContactSection.tsx",
+          "frontend/src/index.css"
+        ],
+        "matchedFiles": [
+          "frontend/src/components/sections/ContactSection.tsx",
+          "frontend/src/index.css"
+        ]
+      },
+      {
+        "id": "REQ-21",
+        "summary": "Add floating decorative shapes and subtle background accents (light-theme appropriate) that contribute to depth and “layered sections” without distracting from content.",
+        "status": "implemented",
+        "plannedFiles": [
+          "frontend/public/assets/generated/decor-shapes-light.dim_1400x900.png",
+          "frontend/src/components/DecorativeBackground.tsx",
+          "frontend/src/App.tsx",
+          "frontend/src/components/sections/HeroSection.tsx"
+        ],
+        "matchedFiles": [
+          "frontend/public/assets/generated/decor-shapes-light.dim_1400x900.png",
+          "frontend/src/components/DecorativeBackground.tsx",
+          "frontend/src/App.tsx",
+          "frontend/src/components/sections/HeroSection.tsx"
+        ]
+      },
+      {
+        "id": "REQ-22",
+        "summary": "Keep the site fully responsive, fast-loading, SEO-friendly, professional, and client-ready after these design and layout changes (including maintaining appropriate metadata).",
+        "status": "implemented",
+        "plannedFiles": [
+          "frontend/index.html",
+          "frontend/src/components/sections/HeroSection.tsx",
+          "frontend/src/components/sections/ProjectsSection.tsx",
+          "frontend/src/components/sections/SkillsSection.tsx",
+          "frontend/src/components/sections/ContactSection.tsx",
+          "frontend/src/components/CursorSpotlight.tsx",
+          "frontend/src/hooks/useScrollReveal.ts",
+          "frontend/src/hooks/useParallax.ts"
+        ],
+        "matchedFiles": [
+          "frontend/index.html",
+          "frontend/src/components/sections/HeroSection.tsx",
+          "frontend/src/components/sections/ProjectsSection.tsx",
+          "frontend/src/components/sections/SkillsSection.tsx",
+          "frontend/src/components/sections/ContactSection.tsx",
+          "frontend/src/components/CursorSpotlight.tsx",
+          "frontend/src/hooks/useScrollReveal.ts",
+          "frontend/src/hooks/useParallax.ts"
+        ]
+      }
+    ]
+  },
+  "changedFiles": [
+    "build-request.json",
+    "build-template/README.md",
+    "feature_evidence.json",
+    "frontend-file-summaries.txt",
+    "frontend-implementation-plan.json",
+    "frontend/index.html",
+    "frontend/public/assets/generated/accent-orb-light.dim_800x800.png",
+    "frontend/public/assets/generated/decor-shapes-light.dim_1400x900.png",
+    "frontend/public/assets/generated/hero-bg-light.dim_1920x1080.png",
+    "frontend/public/assets/generated/profile.dim_900x1100.png",
+    "frontend/public/assets/generated/project-home-price-predictor.dim_1200x800.png",
+    "frontend/public/assets/generated/project-persevan-ai.dim_1200x800.png",
+    "frontend/public/assets/generated/project-simplenntp.dim_1200x800.png",
+    "frontend/src/App.tsx",
+    "frontend/src/components/CursorSpotlight.tsx",
+    "frontend/src/components/DecorativeBackground.tsx",
+    "frontend/src/components/GlassCard.tsx",
+    "frontend/src/components/TopNav.tsx",
+    "frontend/src/components/admin/AdminPanel.tsx",
+    "frontend/src/components/admin/AdminSubmissionsPanel.tsx",
+    "frontend/src/components/auth/LoginButton.tsx",
+    "frontend/src/components/sections/AboutSection.tsx",
+    "frontend/src/components/sections/ContactSection.tsx",
+    "frontend/src/components/sections/HeroSection.tsx",
+    "frontend/src/components/sections/ProjectsSection.tsx",
+    "frontend/src/components/sections/SkillsSection.tsx",
+    "frontend/src/hooks/useParallax.ts",
+    "frontend/src/hooks/usePrefersReducedMotion.ts",
+    "frontend/src/hooks/useScrollReveal.ts",
+    "frontend/src/index.css",
+    "frontend/tailwind.config.js",
+    "project_state.json",
+    "scratch/component-selection.json",
+    "spec.md",
+    "spec_vs_diff_report.json"
+  ]
+}

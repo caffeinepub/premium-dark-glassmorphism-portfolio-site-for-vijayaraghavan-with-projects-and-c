@@ -1,0 +1,57 @@
+import { useInternetIdentity } from '@/hooks/useInternetIdentity';
+import { useQueryClient } from '@tanstack/react-query';
+import { Button } from '@/components/ui/button';
+import { LogIn, LogOut } from 'lucide-react';
+
+export default function LoginButton() {
+  const { login, clear, loginStatus, identity } = useInternetIdentity();
+  const queryClient = useQueryClient();
+
+  const isAuthenticated = !!identity;
+  const disabled = loginStatus === 'logging-in';
+
+  const handleAuth = async () => {
+    if (isAuthenticated) {
+      await clear();
+      queryClient.clear();
+    } else {
+      try {
+        await login();
+      } catch (error: any) {
+        console.error('Login error:', error);
+        if (error.message === 'User is already authenticated') {
+          await clear();
+          setTimeout(() => login(), 300);
+        }
+      }
+    }
+  };
+
+  return (
+    <Button
+      onClick={handleAuth}
+      disabled={disabled}
+      variant={isAuthenticated ? 'outline' : 'default'}
+      size="sm"
+      className={
+        isAuthenticated
+          ? 'border-gray-300 hover:bg-gray-100'
+          : 'bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white'
+      }
+    >
+      {disabled ? (
+        'Loading...'
+      ) : isAuthenticated ? (
+        <>
+          <LogOut className="mr-2 h-4 w-4" />
+          Logout
+        </>
+      ) : (
+        <>
+          <LogIn className="mr-2 h-4 w-4" />
+          Admin Login
+        </>
+      )}
+    </Button>
+  );
+}
